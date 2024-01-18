@@ -1,0 +1,10 @@
+<div>
+  <div class="task-list">
+    <span class="list-title">ToDo</span>
+    <todo-item
+      *ngFor="let task of tasks"
+      [title]="task.title"
+      [done]="task.done">
+    </todo-item>
+  </div>
+</div>

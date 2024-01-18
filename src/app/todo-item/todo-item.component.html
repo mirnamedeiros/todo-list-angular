@@ -1,0 +1,9 @@
+<div class="task-item">
+  <input type="checkbox" [checked]="done" />
+
+  <span class="task-title">{{ title }}</span>
+
+  <i class="fa fa-times" (click)="removeTask()"></i>
+
+  <i class="fa fa-pencil" (click)="editTask()"></i>
+</div>
