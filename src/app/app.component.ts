@@ -11,6 +11,11 @@ import {TodoListComponent} from "./todo-list/todo-list.component";
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
+
 export class AppComponent {
   title = 'todo-list-angular';
+
+  spiralRange(n: number): number[] {
+    return Array.from({ length: n }, (_, index) => index);
+  }
 }

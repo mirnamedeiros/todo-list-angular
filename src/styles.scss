@@ -1,1 +1,48 @@
 @import "font-awesome/css/font-awesome.css";
+
+//vars
+$blue: #89B5DA;
+$white: #FEFDF8;
+$dark-blue: #1A6EB4;
+$grey: #E7E6E2;
+$light-blue: #A1C5DE;
+$light-grey: #DFE6F1;
+
+$accent-font-color: #DB324D;
+$border-color: #5a5a5a;
+
+$icon-color-1: #fff;
+$icon-color-2: #00711b;
+$icon-color-3: #FD5200;
+$icon-color-4: #72195A;
+$icon-color-5: #C42021;
+
+$icon-bg-1: #1B998B;
+$icon-bg-2: #275DAD;
+
+//position absolute mixin
+@mixin position-absolute ($top: null, $left: null, $right: null, $bottom: null) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
+//transitions mixin
+@mixin transition-mix($property: all, $duration: 0.2s, $timing: linear, $delay: 0s) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $timing;
+  transition-delay: $delay;
+}
+
+html, body {
+  font-size: 10px;
+  font-family: 'Victor Mono', monospace;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}

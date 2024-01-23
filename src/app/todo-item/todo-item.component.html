@@ -1,9 +1,34 @@
-<div class="task-item">
-  <input type="checkbox" [checked]="done" />
+<div>
 
-  <span class="task-title">{{ title }}</span>
+  <div *ngIf="!editing" class="task-item">
+    <div class="checkbox">
+      <input type="checkbox" id="check" [checked]="task.done" (click)="toggleDone()"/>
+          <span>{{ task.title }}</span>
+    </div>
 
-  <i class="fa fa-times" (click)="removeTask()"></i>
+    <div class="options">
+      <i class="fa fa-trash" (click)="removeTask()"></i>
 
-  <i class="fa fa-pencil" (click)="editTask()"></i>
+      <i class="fa fa-pencil" (click)="editingTask()"></i>
+    </div>
+  </div>
+
+  <div *ngIf="editing" class="task-item">
+    <div class="checkbox">
+      <input type="checkbox" id="check2" [checked]="task.done" (click)="toggleDone()"/>
+      <input
+        #editedTask
+        type="text"
+        [value]="task.title"
+      />
+    </div>
+
+    <div class="options">
+      <i class="fa fa-times" (click)="cancelEdit()"></i>
+
+      <i class="fa fa-check" (click)="confirmEdit(editedTask.value)"></i>
+    </div>
+  </div>
+
+
 </div>

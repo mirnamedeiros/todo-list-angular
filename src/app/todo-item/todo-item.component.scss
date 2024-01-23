@@ -1,4 +1,59 @@
+@import "../../styles";
+
 .task-item {
-  width: 100%;
-  margin-top: 20px;
+  font-size: 2rem;
+  text-align: start;
+  padding: 10px 0 10px 0;
+  border-bottom: 0.2rem solid $blue;
+  display: flex;
+  align-items: center;
+
+  display: flex;
+  justify-content: space-between;
 }
+
+.label{
+  display:block;
+
+}
+h1{
+  color:white;
+}
+.holder {
+  width:400px;
+  margin:0 auto;
+}
+.checkbox {
+  position:relative;
+  display:block;
+  width:100%;
+  height:60px;
+  overflow:hidden;
+}
+.checkbox:not(:last-child){
+  border-bottom:2px solid white;
+}
+.check {
+  width:50px;
+  height:50px;
+  position:absolute;
+  opacity:0;
+}
+.label span {
+  position:absolute;
+  margin-top:12px;
+}
+.path1{
+  stroke-dasharray:400;
+  stroke-dashoffset:400;
+  transition:.5s all;
+}
+.path2{
+  stroke-dasharray:1800;
+  stroke-dashoffset:1800;
+  transition:.5s all;
+}
+.check:checked + label svg g path {
+  stroke-dashoffset:0;
+}
+
