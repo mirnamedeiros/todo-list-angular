@@ -1,9 +1,11 @@
 <div>
 
   <div *ngIf="!editing" class="task-item">
-    <div class="checkbox">
-      <input type="checkbox" id="check" [checked]="task.done" (click)="toggleDone()"/>
-          <span>{{ task.title }}</span>
+    <div class="checkbox-wrapper">
+      <label class="checkbox">
+        <input type="checkbox" class="checkbox-input" [checked]="task.done" (click)="toggleDone()"/>
+        <span class="checkbox-label" [ngClass]="{'text-strikethrough': task.done}">{{ task.title }}</span>
+      </label>
     </div>
 
     <div class="options">
@@ -14,13 +16,17 @@
   </div>
 
   <div *ngIf="editing" class="task-item">
-    <div class="checkbox">
-      <input type="checkbox" id="check2" [checked]="task.done" (click)="toggleDone()"/>
-      <input
-        #editedTask
-        type="text"
-        [value]="task.title"
-      />
+    <div class="checkbox-wrapper">
+      <label class="checkbox">
+        <input type="checkbox" [checked]="task.done" (click)="toggleDone()"/>
+        <input
+          #editedTask
+          type="text"
+          class="checkbox-label checkbox-edit"
+          [ngClass]="{'text-strikethrough': task.done}"
+          [value]="task.title"
+        />
+      </label>
     </div>
 
     <div class="options">

@@ -34,13 +34,21 @@ export class TodoListComponent implements OnInit {
     localStorage.setItem(todoListStorageKey, JSON.stringify(this.tasks));
   }
 
-  add(title: string) {
+  add(newTaskInput: HTMLInputElement) {
+    const title = newTaskInput.value;
+
+    if (title.trim() === '') {
+      return;
+    }
+
     const newTask: Task = {
       title: title,
       done: false
     };
     this.tasks.push(newTask);
     this.save();
+
+    newTaskInput.value = '';
   }
 
   update(editTask: Task) {

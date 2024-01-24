@@ -1,12 +1,11 @@
 @import "font-awesome/css/font-awesome.css";
 
 //vars
-$blue: #89B5DA;
-$white: #FEFDF8;
-$dark-blue: #1A6EB4;
-$grey: #E7E6E2;
-$light-blue: #A1C5DE;
-$light-grey: #DFE6F1;
+$light-color: #FFEBD2;
+$light-orange: #FFA364;
+$dark-orange: #FC7643;
+$brown: #AF4F41;
+$dark-blue: #273248;
 
 $accent-font-color: #DB324D;
 $border-color: #5a5a5a;
@@ -39,10 +38,10 @@ $icon-bg-2: #275DAD;
 
 html, body {
   font-size: 10px;
-  font-family: 'Victor Mono', monospace;
 }
 
 * {
   padding: 0;
   margin: 0;
+  font-family: 'Victor Mono', monospace;
 }

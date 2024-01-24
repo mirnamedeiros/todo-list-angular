@@ -1,14 +1,15 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import {Task} from "../model/task.model";
 import {FormsModule} from "@angular/forms";
-import {NgIf} from "@angular/common";
+import {NgClass, NgIf} from "@angular/common";
 
 @Component({
   selector: 'todo-item',
   standalone: true,
   imports: [
     FormsModule,
-    NgIf
+    NgIf,
+    NgClass
   ],
   templateUrl: './todo-item.component.html',
   styleUrl: './todo-item.component.scss'

@@ -5,18 +5,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $blue;
+  background-color: $dark-blue;
   position: relative;
   overflow: hidden;
   .note {
     width: 50%;
     height: auto;
-    background-color: #FEFDF8;
+    background-color: $light-orange;
     border: 0.6rem solid $dark-blue;
     z-index: 1;
     .spiral-part {
       height: 3rem;
-      background-color: $light-blue;
+      background-color: $light-color;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -31,7 +31,7 @@
         .wire {
           width: 0.3rem;
           height: 2.5rem;
-          background-color: $light-grey;
+          background-color: $dark-orange;
           margin-top: -30px;
           margin-left: 9px;
           border-radius: 2px;
